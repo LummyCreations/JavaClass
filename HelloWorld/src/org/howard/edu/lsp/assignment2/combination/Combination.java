@@ -5,45 +5,40 @@ import java.util.*;
 /**
  * 
  * @author Tolulope Akinlabi
- * @version 1.0
- * @since 02-01-2021
- *  
+ *
  */
 
+
 public class Combination {
+	
+	//Algorithm :
+	//Create a populated List 
+	//Loop through the list find the maximum number
+	//if two values in the array equals a targeted max sum
+	//print their index
+	
 	
 	/**
 	 * 
 	 * @param args
-	 * @author Tolulope Akinlabi
 	 */
-	
-	public static void newArray(String[] args) { 
+	public static void combArray(String[] args){
 		
-		//initializing arrays and target value
-		int[] numArrayOne = {2,4,6,8,10,12};
-		int[] numArrayTwo = {10,20,30,40,50,60,70};
-		
-		int targetOfArrayOne = 12;
-		int targetOfArrayTwo = 70;
-		int[] checker;
-		int[] check;
-		
-		//Check that sum in Array One does not become negative
-		for (int i = 0; i < numArrayOne.size(); i++) {
-			
-			if ((targetOfArrayOne - numArrayOne.get(i)) >= 0) {
-				checker.add(numArrayOne.get(i));
-			}
-		}
-		
-		//Check that sum in Array Two does not become negative
-		
-		for (int a = 0; a < numArrayTwo.size(); a++) {
-			
-			if ((targetOfArrayTwo - numArrayTwo.get(a)) >= 0) {
-				check.add(numArrayOne.get(a));
-			}
-		}
+			//create and populate the array
+		  int [] numArray= {10,20,30,40,50}; 
+		  
+		  //loop through to find the max num
+		  int temp, size;
+		  size = numArray.length;
+
+	      for(int i = 0; i < size; i++ ){
+	          for(int j = i+1; j < size; j++){
+	             if(numArray[i] > numArray[j]){
+	                temp = numArray[i];
+	                numArray[i] = numArray[j];
+	                numArray[j] = temp;
+	             }
+	          }
+	       }				  
 	}
 }
