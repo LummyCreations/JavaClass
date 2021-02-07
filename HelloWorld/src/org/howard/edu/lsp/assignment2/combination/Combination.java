@@ -14,7 +14,7 @@ public class Combination {
 	//Algorithm :
 	//Create a populated List 
 	//Loop through the list find the maximum number
-	//if two values in the array equals a targeted max sum
+	//if values in the array equals a targeted max sum
 	//print their index
 	
 	
@@ -41,4 +41,7 @@ public class Combination {
 	          }
 	       }				  
 	}
+
+
+
 }
