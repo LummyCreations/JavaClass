@@ -12,29 +12,24 @@ public class Test extends Combination {
 	/**
 	 * 
 	 * @param args
+	 * @param  
 	 */
 	
 	//Drive the combination class and prints the in
 	public static void main(String[] args) {
-			
+			int ranSum;
 		Combination comboArray = new Combination(); 
 		
-		//if array is empty, return a note
-				if(comboArray.numArray == 0) {
-					System.out.println("Empty Array");
-					return;
-				}
-
-				//print all the possible sum combinations of the array
-				
-				for (int i=0; i < comboArray.numArray.length; i++) {
-					
-					System.out.println("(");
-					for (int j = 0; j <comboArray.numArray.length; j++) {
-						System.out.println(comboArray.numArray.length.get(i).get(j) + " ");
-					}
-					
-					System.out.println(")");
-				}
+		//loop to add numbers in the array
+		int a, b;
+		for (int a, b: numArray) { 
+			  ranSum = a + b ;
+        } 
+		
+		//test the values if it sums up to the target value
+		if ( ranSum == comboArray.temp) {
+			System.out.println(a + " ," + b);
+		}
 	}
+		
 }
