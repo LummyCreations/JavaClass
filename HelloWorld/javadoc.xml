@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="." destdir="C:\Users\tolul\Downloads" doctitle="javaDocAss4" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="org.howard.edu.lsp.assignment4.integerset" source="15" sourcepath="src" splitindex="true" use="true" version="true">
+            <link href="https://docs.oracle.com/en/java/javase/15/docs/api/"/>
+            <link href="file:/C:/Users/tolul/Downloads/"/>
+        </javadoc>
+    </target>
+</project>
