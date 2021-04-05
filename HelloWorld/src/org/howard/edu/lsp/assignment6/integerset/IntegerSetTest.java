@@ -5,6 +5,8 @@ package org.howard.edu.lsp.assignment6.integerset;
 import  org.howard.edu.lsp.assignment6.integerset.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
 
 /**
@@ -27,6 +29,7 @@ class IntegerSetTest {
 
 	}
 	
+
 	@Test
 	@DisplayName("Test case for clear")
 	void testClear() {
@@ -36,9 +39,12 @@ class IntegerSetTest {
 	
 	@Test
 	@DisplayName("Test case for Length")
-	void testLength() {
-		assertEqual(s, 4);
-	}
+	 void testSize() {
+        assertEquals(4, this.s.size());
+        assertEquals(0, new IntegerSet(new Integer[]{}).size());
+        this.myList.add(10);
+        assertEquals(5, this.s.size());
+    
 	
 	@Test
 	@DisplayName("Test case to return set")
@@ -53,7 +59,7 @@ class IntegerSetTest {
 		assertTrue(() -> {
 			return true;
 		});
-
+		
 		assertTrue(s, a, "set not equal");
 		assertTrue(s, a, () -> {
 			return "s, a";
@@ -94,21 +100,38 @@ class IntegerSetTest {
 	
 	@Test
 	@DisplayName("Test case for the largest number")
-	void testLargest() {
-		assertEqual(s, 5);
-	}
-	
+    public void testSmallest() {
+		IntegerSet s = new IntegerSet();
+        assertEquals(0, set.findMin(s));
+        assertNotEquals(5, set.findMin(s));
+    }
+    
+    @Test (expected = IllegalArgumentException.class)
+    void testFindMinShouldThrowException() {
+    	IntegerSet s = new IntegerSet();
+        s.findMin(new int[]{});
+        
+    
 	@Test
-	@DisplayName("Test case for the smallest number")
-	void testSmallest() {
-		assertEqual(s, 0);
-	}
+	@DisplayName("Test case for the largest number")
+    void testLargest() {
+		IntegerSet s = new IntegerSet();
+        assertEquals(5, set.findMax(s));
+        assertNotEquals(0, set.findMax(s));
+    }
+    
+    @Test (expected = IllegalArgumentException.class)
+    void testFindMinShouldThrowException() {
+    	IntegerSet s = new IntegerSet();
+        s.findMax(new int[]{}); 
+        
 	
 	@Test
 	@DisplayName("Test case to add a value to set")
 	void testAdd() {
-		assertEqual(s, 5);
-	}
+        Testcases testcases = new Testcases();
+        assertEquals(Arrays.asList(12,6,9,8), testcases.a());
+    }
 	
 	@Test
 	@DisplayName("Test case to remove a value to set")
@@ -160,6 +183,7 @@ class IntegerSetTest {
 			return "set is empty";
 		});
 	}
+	
 	
 	@Test
 	@DisplayName("Test case check if value is string")
