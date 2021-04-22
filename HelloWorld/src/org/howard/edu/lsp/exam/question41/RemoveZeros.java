@@ -9,7 +9,7 @@ public class RemoveZeros{
 	 * 
 	 * Method takes an list of element with duplicate 0s
 	 * Stores the list of element into variable number
-	 * Stips the list of all 0 values 
+	 * Strips the list of all 0 values 
 	 * Stores the result in a new list 
 	 */
 	public static void main(String[] args) {

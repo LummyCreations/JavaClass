@@ -18,8 +18,8 @@ class RemoveZerosTest {
 	
 
 	@Test
-	@DisplayName("Test to show if list is stripped of 0 values")
-	void stripZeros() {
+	@DisplayName("Test to show if list is contains 0 values")
+	void containsZero() {
 		assertEqual(numbers, {0, 7, 2, 0, 0, 4, 0});
 	}
 
