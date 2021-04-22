@@ -29,4 +29,14 @@ class RemoveZerosTest {
 		assertEqual(numbers, {});
 	}
 
+
+	/**
+	 * @param object
+	 * @author tolul
+	 */
+	private void assertEqual(Object object) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
