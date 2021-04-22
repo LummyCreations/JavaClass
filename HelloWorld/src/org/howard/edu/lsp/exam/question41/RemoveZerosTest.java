@@ -22,5 +22,11 @@ class RemoveZerosTest {
 	void containsZero() {
 		assertEqual(numbers, {0, 7, 2, 0, 0, 4, 0});
 	}
+	
+	@Test
+	@DisplayName("Test to show if list is contains no values")
+	void containsNull() {
+		assertEqual(numbers, {});
+	}
 
 }
