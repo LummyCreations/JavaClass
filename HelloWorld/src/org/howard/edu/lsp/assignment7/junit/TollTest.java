@@ -8,8 +8,8 @@ public static void main(String [] args){
 	Truck daewoo = new DaewooTruck(6, 17000); 
 
 	booth.calculateToll(ford);
-	booth.displayData();
+	booth.displayReceipt();
 	booth.reset();
 	booth.calculateToll(daewoo);
-	booth.displayData();	
+	booth.displayReceipt();	
 }

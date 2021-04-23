@@ -50,9 +50,7 @@ public class TollBooth {
 	   }
 	}
   
-  public static void AlleghenyTollBooth(String arg[]){
-	  
-  }
+  
 	
 }
 
